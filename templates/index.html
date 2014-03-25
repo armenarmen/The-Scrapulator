@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find what your scrap metal is worth</title>
+		<style type="text/css">
+			body {
+				font-family: Helvetica, Geneva, Arial,
+          		SunSans-Regular, sans-serif }
+				color: purple;
+				background-color: #d8da3d }
+		</style>
+	</head>
+	<body>
+		<H1>Welcome to Scrapulator!</h1>
+		<h2>Tell me what type of metal you have and how much, and I'll give you an
+		estimate on what it is worth.</h2>
+		
+	
+	<form action="/prices" method="POST"> 
+		<select name="metal">
+			<option value="aluminum">Aluminum</option>
+			<option value="copper">Copper</option>
+			<option value="gold">Gold</option>
+			<option value="nickel">Nickel</option>
+			<option value="platinum">Platinum</option>
+			<option value="silver">Silver</option>
+			<option value="zinc">Zinc</option>
+			</select>
+			<br>			
+		<input type="number" name="pounds" min="0"  value="0">pounds
+		<input type="number" name="ounces" min ="0" value = "0">ounces
+				
+		<input type="submit" value="submit">
+
+	</form>
+    
+    <div>
+    {% if metal != "" %}
+  
+   <p>{{ metal }} is currently selling for ${{ price }} per pound.</p>
+
+   <p>So your {{ weight }} pounds {{ metal }} is worth ${{ value }} </p>
+
+   
+
+   	{% elif met == "" %}
+   	
+    {% endif %}
+
+    </div>
+		
+		
+	</body>
+-->
+</html>
