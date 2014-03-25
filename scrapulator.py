@@ -56,15 +56,10 @@ def index():
 	return render_template('index.html', metal=metal, pounds=pounds, ounces=ounces)
 	index.methods = ['POST']
 
-# this is the dictionary of minerals and prices.
-#prices_per = whole_shebang(price_cell)
-
-# {'platinum': 23264.0, 'copper': 2.92, 'nickel': 7.31, 'aluminum': 0.76, 
-#  'gold': 21408.0, 'zinc': 0.89, 'silver': 332.0}
 
 @app.route('/prices', methods=['GET', 'POST'])
 def prices():
-#	return "butt"
+
 	price_dict = whole_shebang(price_cell) # this should bring all that in
 	if request.method == "POST":
 		metal = request.form['metal']
